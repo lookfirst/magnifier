@@ -27,18 +27,22 @@ export default class Magnifier {
 
   set height(h) {
     this.lens.style.height = h;
+    return this;
   }
 
   set width(w) {
     this.lens.style.width = w;
+    return this;
   }
 
   set borderRadius(r) {
     this.lens.borderRadius = r;
+    return this;
   }
 
   set className(name) {
     this.lens.className = name;
+    return this;
   }
 
   calcImageSize() {
