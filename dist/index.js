@@ -63,7 +63,7 @@ var Magnifier = (function () {
   }, {
     key: 'borderRadius',
     value: function borderRadius(r) {
-      this.lens.borderRadius = r;
+      this.lens.style.borderRadius = r;
       return this;
     }
   }, {
