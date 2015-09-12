@@ -49,6 +49,30 @@ var Magnifier = (function () {
   }
 
   _createClass(Magnifier, [{
+    key: 'height',
+    value: function height(h) {
+      this.lens.style.height = h;
+      return this;
+    }
+  }, {
+    key: 'width',
+    value: function width(w) {
+      this.lens.style.width = w;
+      return this;
+    }
+  }, {
+    key: 'borderRadius',
+    value: function borderRadius(r) {
+      this.lens.borderRadius = r;
+      return this;
+    }
+  }, {
+    key: 'className',
+    value: function className(name) {
+      this.lens.className = name;
+      return this;
+    }
+  }, {
     key: 'calcImageSize',
     value: function calcImageSize() {
       var _this = this;
@@ -142,30 +166,6 @@ var Magnifier = (function () {
     key: 'hide',
     value: function hide() {
       this.lens.style.display = 'none';
-      return this;
-    }
-  }, {
-    key: 'height',
-    set: function set(h) {
-      this.lens.style.height = h;
-      return this;
-    }
-  }, {
-    key: 'width',
-    set: function set(w) {
-      this.lens.style.width = w;
-      return this;
-    }
-  }, {
-    key: 'borderRadius',
-    set: function set(r) {
-      this.lens.borderRadius = r;
-      return this;
-    }
-  }, {
-    key: 'className',
-    set: function set(name) {
-      this.lens.className = name;
       return this;
     }
   }]);
