@@ -45,6 +45,7 @@ var Magnifier = (function () {
     this.onmove = this.onmove.bind(this);
     this.onend = this.hide.bind(this);
     this.bind();
+    return this;
   }
 
   _createClass(Magnifier, [{
