@@ -15,10 +15,11 @@
     "is-pointer-inside": "^0.1.0"
   },
   "jspm": {
+    "registry": "npm",
     "dependencies": {
-      "npm:global-offset": "^0.1.1",
-      "npm:insert-after": "^0.1.0",
-      "npm:is-pointer-inside": "^0.1.0"
+      "global-offset": "^0.1.1",
+      "insert-after": "^0.1.0",
+      "is-pointer-inside": "^0.1.0"
     }
   },
   "devDependencies": {
