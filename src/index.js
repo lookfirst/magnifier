@@ -37,7 +37,7 @@ export default class Magnifier {
   }
 
   borderRadius(r) {
-    this.lens.borderRadius = r;
+    this.lens.style.borderRadius = r;
     return this;
   }
 
