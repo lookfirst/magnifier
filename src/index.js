@@ -23,6 +23,7 @@ export default class Magnifier {
     this.onmove = ::this.onmove;
     this.onend = ::this.hide;
     this.bind();
+    return this;
   }
 
   set height(h) {
