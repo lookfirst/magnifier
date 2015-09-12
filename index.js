@@ -25,6 +25,22 @@ export default class Magnifier {
     this.bind();
   }
 
+  set height(h) {
+    this.lens.style.height = h;
+  }
+
+  set width(w) {
+    this.lens.style.width = w;
+  }
+
+  set borderRadius(r) {
+    this.lens.borderRadius = r;
+  }
+
+  set className(name) {
+    this.lens.className = name;
+  }
+
   calcImageSize() {
     const orig = document.createElement('img');
     orig.style.position = 'absolute';
