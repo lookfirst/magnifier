@@ -42,7 +42,7 @@ var Magnifier = (function () {
     (0, _insertAfter2['default'])(this.lens, this.el);
     this.show();
     this.calcImageSize();
-    if (this.onmove) {
+    if (this.onmove && this.onmove.bind) {
       this.onmove = this.onmove.bind(this);
       this.onend = this.hide.bind(this);
       this.bind();
