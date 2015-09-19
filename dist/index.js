@@ -44,11 +44,9 @@ var Magnifier = (function () {
     this.calcImageSize();
     if (this.onmove) {
       this.onmove = this.onmove.bind(this);
-    }
-    if (this.onend) {
       this.onend = this.hide.bind(this);
+      this.bind();
     }
-    this.bind();
     return this;
   }
 

@@ -21,12 +21,10 @@ export default class Magnifier {
     this.show();
     this.calcImageSize();
     if (this.onmove) {
-      this.onmove = ::this.onmove;
+      this.onmove = this.onmove.bind(this);
+      this.onend = this.hide.bind(this);
+      this.bind();
     }
-    if (this.onend) {
-      this.onend = ::this.hide;
-    }
-    this.bind();
     return this;
   }
 
