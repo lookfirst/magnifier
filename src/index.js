@@ -110,7 +110,9 @@ export default class Magnifier {
     this.lens.removeEventListener('mouseleave', this.onend, false);
     this.lens.removeEventListener('touchmove', this.onmove, false);
     this.lens.removeEventListener('touchend', this.onend, false);
-    this.lens.parentNode.removeChild(this.lens);
+    if (this.lens.parentNode) {
+      this.lens.parentNode.removeChild(this.lens);
+    }
     return this;
   }
 

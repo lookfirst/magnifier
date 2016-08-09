@@ -1,7 +1,7 @@
 {
   "name": "magnifier",
   "description": "Magnifier an image",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "keywords": [
     "image",
     "magnifier",
@@ -10,24 +10,25 @@
   ],
   "repository": "andrepolischuk/magnifier",
   "dependencies": {
-    "global-offset": "^0.1.1",
-    "insert-after": "^0.1.0",
-    "is-pointer-inside": "^0.1.0"
+    "global-offset": "^0.1.6",
+    "insert-after": "^0.1.3",
+    "is-pointer-inside": "^0.1.4"
   },
   "jspm": {
     "registry": "npm",
     "dependencies": {
-      "global-offset": "^0.1.1",
-      "insert-after": "^0.1.0",
-      "is-pointer-inside": "^0.1.0"
+      "global-offset": "^0.1.6",
+      "insert-after": "^0.1.3",
+      "is-pointer-inside": "^0.1.4"
     }
   },
   "devDependencies": {
-    "babel": "^5.5.6"
+    "babel-cli": "^6.11.4",
+    "babel-preset-es2015": "^6.13.2"
   },
   "main": "dist/index.js",
   "scripts": {
-    "transpile": "babel --stage 0 src/index.js > dist/index.js",
+    "transpile": "babel src/index.js > dist/index.js",
     "prepublish": "npm run transpile"
   },
   "author": "Andrey Polischuk <andre.polischuk@gmail.com>",

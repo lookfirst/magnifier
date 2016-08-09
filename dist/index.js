@@ -1,14 +1,10 @@
 'use strict';
 
-Object.defineProperty(exports, '__esModule', {
+Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _globalOffset = require('global-offset');
 
@@ -22,7 +18,11 @@ var _isPointerInside = require('is-pointer-inside');
 
 var _isPointerInside2 = _interopRequireDefault(_isPointerInside);
 
-var Magnifier = (function () {
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Magnifier = function () {
   function Magnifier(el) {
     _classCallCheck(this, Magnifier);
 
@@ -39,7 +39,7 @@ var Magnifier = (function () {
     this.lens.style.overflow = 'hidden';
     this.lens.style.visibility = 'hidden';
     this.lens.className = 'magnifier';
-    (0, _insertAfter2['default'])(this.lens, this.el);
+    (0, _insertAfter2.default)(this.lens, this.el);
     this.show();
     this.calcImageSize();
     if (this.onmove && this.onmove.bind) {
@@ -101,13 +101,13 @@ var Magnifier = (function () {
     value: function onmove(event) {
       event.preventDefault();
       event = event.type.indexOf('touch') === 0 ? event.changedTouches[0] : event;
-      if (!(0, _isPointerInside2['default'])(this.el, event)) return this.hide();
+      if (!(0, _isPointerInside2.default)(this.el, event)) return this.hide();
       this.show();
       var _event = event;
       var pageX = _event.pageX;
       var pageY = _event.pageY;
 
-      var _offset = (0, _globalOffset2['default'])(this.el);
+      var _offset = (0, _globalOffset2.default)(this.el);
 
       var left = _offset.left;
       var top = _offset.top;
@@ -156,7 +156,9 @@ var Magnifier = (function () {
       this.lens.removeEventListener('mouseleave', this.onend, false);
       this.lens.removeEventListener('touchmove', this.onmove, false);
       this.lens.removeEventListener('touchend', this.onend, false);
-      this.lens.parentNode.removeChild(this.lens);
+      if (this.lens.parentNode) {
+        this.lens.parentNode.removeChild(this.lens);
+      }
       return this;
     }
   }, {
@@ -174,8 +176,7 @@ var Magnifier = (function () {
   }]);
 
   return Magnifier;
-})();
+}();
 
-exports['default'] = Magnifier;
-module.exports = exports['default'];
+exports.default = Magnifier;
 
